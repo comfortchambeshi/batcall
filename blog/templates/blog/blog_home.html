@@ -1,0 +1,41 @@
+{% extends "header.html" %}
+
+{% block header %}
+{% load static %}
+<title>My blog - Comfortchambeshi</title>
+    <div class="article-list">
+        <div class="container">
+            <ul class="nav nav-tabs">
+                <li class="nav-item"><a class="nav-link active" href="#">Quotes</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Tecnology</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Tutorial</a></li>
+            </ul>
+            <div class="intro">
+                <h2 class="text-center">Latest Articles</h2>
+                <p class="text-center">Hello there, you can checkout what we write below.&nbsp;</p>
+            </div>
+            <div  class="row articles">
+                {% for article in articles %}
+                
+                <div class="col-sm-6 col-md-4 item">
+                    
+                    <a href="/blog/{{article.id}}"><img class="img-fluid" src="{{ article.thumbnail.url }}" width="100" height="100">
+                    <h3 class="text-primary name">{{article.title}}</h3>
+                    <p class="description">{{article.published_date}}</p><a class="action" href="#"><i class="fa fa-arrow-circle-right"></i>
+                     </a>
+                    </div>
+               
+                   
+            
+            {% endfor %}
+            </div>
+        </div>
+    </div>
+    
+    {% endblock%}
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/bs-init.js"></script>
+</body>
+
+</html>

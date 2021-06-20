@@ -1,0 +1,47 @@
+{% extends "header.html" %}
+
+{% block header %}
+{% load static %}
+    <div class="article-list">
+        <div class="container">
+            <ul class="nav nav-tabs">
+                <li class="nav-item"><a class="nav-link" href="#">{{article.category}}</a></li>
+                <li class="nav-item"></li>
+            </ul>
+        </div>
+    </div>
+    <div class="article-clean">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 col-xl-8 offset-lg-1 offset-xl-2" style="width: 100%;max-width: 100%;">
+                    <div class="intro">
+                        
+                        <h1 class="text-center">{{ article.title }}</h1>
+                        <p class="text-center"><span class="by">by</span> <a href="#">{{ article.author}}</a><span class="date">{{ article.published_date }} </span></p><img class="img-fluid" src="{{ article.thumbnail.url}}" style="height:400px; width:100%"></div>
+                    <div class="text">
+                        <p>{{ article.body }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <h1 class="bg-light border rounded-0">Comments(1)</h1>
+            <form class="shadow"><textarea class="form-control"></textarea>
+                <p><button class="btn btn-primary" type="button">comment</button></p>
+            </form>
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Title</h4>
+                    <h6 class="text-muted card-subtitle mb-2">Subtitle</h6>
+                    <p class="card-text">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p><a class="card-link" href="#">Link</a><a class="card-link" href="#">Link</a></div>
+            </div>
+        </div>
+    </div>
+    {% endblock%}
+    <div class="article-clean"></div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/bs-init.js"></script>
+</body>
+
+</html>

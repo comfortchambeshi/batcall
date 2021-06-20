@@ -1,0 +1,31 @@
+{% extends 'header.html' %}
+{% load static %}
+{% block header %}
+<title>{{importants.title}}</title>
+    <div class="features-boxed">
+        <div class="container">
+            <div class="intro">
+                <h2 class="text-center">{{importants.title}}</h2>
+            </div>
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="card">
+                        <div class="card-body">
+                          {{importants.main_body |safe}}
+                          </p><span class="card-link" >Updated: {{importants.date_time}}</span></div>
+                    </div>
+                </div>
+                <div class="col-md-4" style="max-width: 208px;width: 251px;">
+                    <ul class="list-group">
+                        <li class="list-group-item"><a href="/importants/read/privacy_policy/">Privacy Policy</a></li>
+                        <li class="list-group-item"><a href="/importants/read/tos/">Terms Of Service</a></li>
+                       
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="margin-top: 29px;"></div>
+    <div></div>
+   {% endblock header%}
+</html>

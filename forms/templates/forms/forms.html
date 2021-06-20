@@ -1,0 +1,66 @@
+{% extends "header.html" %}
+
+{% block header %}
+{% load static %}
+ <div class="contact-clean">
+{% if '/contact/' in request.path %}
+
+
+        <form method="post" action="">
+            {% csrf_token %}
+            <h2 class="text-center">Contact</h2>
+            {{ form.errors}}
+            <div class="form-group">{{ form.full_name}}
+             
+            </div>
+            
+            <div class="form-group">{{ form.email}}
+             
+            </div>
+            <div class="form-group">{{ form.message}}
+             
+            </div>
+            
+            
+          
+            <div class="form-group"><button name="submit" class="btn btn-primary" type="submit">send </button></div>
+             </form>
+            
+             {% elif '/hire/' in request.path %}
+             
+             <form method="post" action="">
+                 {% csrf_token %}
+            <h2 class="text-center">Hire</h2>
+             <div class="form-group">
+          {{hireform.customer_name}}
+          </div>
+          <div class="form-group">
+          {{hireform.email}}
+          </div>
+          <div class="form-group">
+          {{hireform.budget}}
+          </div>
+          <div class="form-group">
+          {{hireform.service}}
+          </div>
+          <div class="form-group">
+          {{hireform.project_description}}
+          </div>
+          
+    <div class="form-group"><button class="btn btn-primary" type="submit">send </button></div>
+    </form>
+    {% else %}
+    
+    The requested url was not found!
+   
+              {% endif %}
+           
+              
+   
+           
+   
+       
+     </div>
+     
+    
+{% endblock%} 

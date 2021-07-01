@@ -3,6 +3,7 @@ As the title is stated above make sure that you install the below dependancies u
 - pip install django-tinymce
 - pip install django-tinymce
 - pip install django-tinymce
+
 Required commands before you start:
 - python3 manage.py makemigrations
 - python3 manage.py migrate

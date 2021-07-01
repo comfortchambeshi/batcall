@@ -1,9 +1,13 @@
 # batcall simple personal website management and portifolio script
-As the title is stated above make sure that you install the below dependancies using the commands shows:
-- pip install django-tinymce
-- pip install django-tinymce
-- pip install django-tinymce
+Batcall simple personal website management and portifolio script is a web app designed and developed to make website management easier for personal websites such as portifolios and team or organisation websites. This app was written by Comfort Batcall using Python Django framework.
 
+Make sure that you install the below dependancies using the commands shows.
+- pip install django-tinymce
+- pip install django-tinymce
+- pip install django-tinymce
+Technology requirements:
+- Python 3+
+- SQLITE
 Required commands before you start:
 - python3 manage.py makemigrations
 - python3 manage.py migrate

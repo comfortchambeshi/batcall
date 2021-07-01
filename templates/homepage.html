@@ -1,0 +1,111 @@
+{% extends 'header.html' %}
+{% block header %}
+{% load static  %}
+<title>Witlevels Official website - Witlevels</title>
+    <div class="border rounded-0 highlight-phone" style="margin: 12px;background-image: url(&quot;{% static 'batcall/img/crill.jpg' %} &quot;);">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="intro">
+                        <h2 class="text-primary">Witlevels</h2>
+                        <h5 class="text-secondary"><strong>Hello there welcome to our official website. We am very greatful that you have taken your time to visit our website. We offer many services pleases make sure that you check them out before you leave. Thanks</strong></h5><a class="btn btn-primary"
+                            role="button" href="{% url 'forms:hire_form' %}">Hire me</a><a class="btn btn-primary" role="button" href="{% url 'forms:contact_form' %}" style="margin-left: 7px;">CONTACT</a></div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="d-none d-md-block iphone-mockup"><img class="device" src="{% static 'batcall/img/batcall.jpg' %}">
+                        <div class="screen"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="features-boxed">
+        <div class="container">
+            <div class="intro">
+                <h2 id="skills" class="text-center">Skills</h2>
+                <p class="text-center">Maybe you may be interested in hiring me to work on a certain project. Please make sure that you check out my skills below.</p>
+            </div>
+            <div class="row justify-content-center features">
+               
+                
+                
+                
+                {% if skills%}
+                {% for skill in skills %}
+                <div class="col-sm-6 col-md-5 col-lg-4 item">
+                    <div class="box"><i class="fab fa-{{skill.icon_url}} icon"></i>
+                        <h3 class="name">{{skill.name}}</h3>
+                        <div class="progress" style="height: 18px;">
+                            <div class="progress-bar bg-primary progress-bar-animated" aria-valuenow="99" aria-valuemin="0" aria-valuemax="100" style="width: {{skill.percentage}}%;">{{skill.percentage}}%</div>
+                        </div>
+                        <p class="description">{{skill.description}}<br></p>
+                        <a class="learn-more" href="{% url 'forms:hire_form' %}">Hire Us »</a></div>
+                </div>
+                {%endfor%}
+                
+                {%else%}
+                {{ 'No skills found!' }}
+                {%endif%}
+            </div>
+        </div>
+    </div>
+    <h1 id="projects" class="text-center">Projects Done</h1>
+    <div>
+        <div class="container">
+            <div class="row">
+                {% if projects %}
+                {% for project in projects %}
+                <div class="col-md-3 col-lg-4 item">
+                    <div class="card border-white border rounded shadow-lg" data-bs-hover-animate="pulse" style="width: 106%;height: 359px;margin: 10px;max-width: 109%;margin-left: -11px;">
+                        <div class="card-body" style="width: {{project.description}}%;height: 350px;padding: 0px;margin: 10px;"><img class="img-thumbnail img-fluid d-lg-flex m-auto align-items-lg-center" style="width: 100%;margin-left: 0px;padding-left: 0px;max-width: 100%;height: 119.31px;" src="{{project.image.url}}">
+                            <h4 class="card-title" style="margin-top: 5px;">{{project.name}}.</h4>
+                            <h6 class="text-muted card-subtitle mb-2" style="margin-top: 0px;">{{project.category}}</h6>
+                            <p class="card-text" style="width: 100%;margin-top: 15px;margin-bottom: 20px;">{{project.description}}<br></p>
+                            <div class="btn-group" role="group"><a href="{{project.info_url}}" class="btn btn-primary" type="button" target="blank" style="margin-left: 7px;">INFO.</a><a href="{{project.demo_url}}" target="blank" class="btn btn-primary" type="button" style="margin-left: 7px;">demo</a></div>
+                        </div>
+                    </div>
+                </div>
+                {%endfor%}
+                {% else%}
+                {{ 'No projects done found!'}}
+                
+                {%endif%}
+            </div>
+        </div>
+    </div>
+    <div class="container">
+      
+        
+        
+        
+        <h1 id="pricing" class="text-center">Pricing</h1>
+    </div><div class="container">
+      <div class="card-deck mb-3 text-center">
+       {% for price in pricings %}
+         <div class="card mb-4 box-shadow">
+          <div class="card-header">
+            <h4 class="my-0 font-weight-normal">{{price.name}}</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title">{{price.currency}}{{price.price}} <small class="text-muted">- {{price.currency_symbol}}</small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>{{price.description}}</li>
+             
+            </ul>
+            <a href="{% url 'forms:contact_form' %}" type="button" class="btn btn-lg btn-block btn-primary">CONTACT</a>
+          </div>
+        </div>
+        {% endfor %}
+        
+       
+
+        
+      </div>
+    </div>
+    {% include "footer.html" %}
+    {% endblock %}
+    
+    
+
+
+    

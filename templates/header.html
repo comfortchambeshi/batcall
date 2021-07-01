@@ -1,0 +1,49 @@
+{% load static  %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script data-ad-client="ca-pub-5465074247970660" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    
+    <link rel="stylesheet" href="{% static 'batcall/bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora">
+    <link rel="stylesheet" href="{% static 'batcall/fonts/fontawesome-all.min.css'  %}">
+    <link rel="stylesheet" href="{% static 'batcall/fonts/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'batcall/fonts/ionicons.min.css' %}">
+    <link rel="stylesheet" href="{static 'batcall/fonts/fontawesome5-overrides.min.css'}">
+    <link rel="stylesheet" href="{% static 'batcall/css/Article-Clean.css' %}">
+    <link rel="stylesheet" href="{% static 'batcall/css/Article-List.css' %}">
+    <link rel="stylesheet" href="{% static 'batcall/css/Bold-BS4-CSS-Image-Slider.css' %}">
+    <link rel="stylesheet" href="{% static 'batcall/css/clean-responsive-pricing-1.css' %}">
+    <link rel="stylesheet" href="{% static 'batcall/css/clean-responsive-pricing.css' %}">
+    <link rel="stylesheet" href="{% static 'batcall/css/Contact-Form-Clean.css'  %}">
+    <link rel="stylesheet" href="{% static 'batcall/css/Features-Boxed.css'  %}">
+    <link rel="stylesheet" href="{% static 'batcall/css/Footer-Dark.css' %}">
+    <link rel="stylesheet" href="{% static 'batcall/css/Highlight-Phone.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="{% static 'batcall/css/Navigation-Clean.css' %}">
+    <link rel="stylesheet" href="{% static 'batcall/css/project-card.css' %}">
+    <link rel="stylesheet" href="{% static 'batcall/css/styles.css' %}">
+</head>
+
+<body>
+    <nav class="navbar navbar-dark navbar-expand-md sticky-top bg-primary navigation-clean">
+        <div class="container"><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button><a class="navbar-brand" href="{% url 'home' %}">Witlevels</a>
+            <div class="collapse navbar-collapse"
+                id="navcol-1">
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item" role="presentation"><a class="nav-link  text-dark" href="{% url 'home' %}"><strong>HOME</strong></a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link  text-dark" href="{% url 'blog:blog_home' %}"><strong>BLOG</strong></a></li>
+                    <li class="nav-item" role="presentation"></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="{% url 'forms:hire_form' %}"><strong>HIRE US</strong></a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="{% url 'forms:contact_form' %}"><strong>CONTACT</strong></a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="/importants/read/privacy_policy/"><strong>PRIVACY POLICY</strong></a></li>
+                </ul>
+            </div></div>
+    </nav>
+    
+    {% block header %}
+    {% endblock %}

@@ -3,6 +3,10 @@ As the title is stated above make sure that you install the below dependancies u
 - pip install django-tinymce
 - pip install django-tinymce
 - pip install django-tinymce
+Required commands before you start:
+- python3 manage.py makemigrations
+- python3 manage.py migrate
+- python3 manage.py collectstatic
 
 Please make sure that you install the above dependancies before you start using this app, otherwise, it will not work.
 Here is a list of all the apps that are included on this app:

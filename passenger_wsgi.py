@@ -1,0 +1,1 @@
+from batcall.wsgi import application

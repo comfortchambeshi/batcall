@@ -5,6 +5,7 @@ Make sure that you install the below dependancies using the commands shows.
 - pip install django-tinymce
 - pip install django-ckeditor 
 - pip install django-paypal
+
 Technology requirements:
 - Python 3+
 - SQLITE

@@ -2,6 +2,7 @@
 Batcall simple personal website management and portifolio script is a web app designed and developed to make website management easier for personal websites such as portifolios and team or organisation websites. This app was written by Comfort Batcall using Python Django framework.
 
 Make sure that you install the below dependancies using the commands shows.
+- pip install pillow
 - pip install django-tinymce
 - pip install django-ckeditor 
 - pip install django-paypal

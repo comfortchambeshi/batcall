@@ -22,4 +22,4 @@ Here is a list of all the apps that are included on this app:
 3) Importants: For managing important documents like the privacy policy, terms of service and cookies policy.
 4) Pricing: For managing your services cost or price.
 In addition you can also use this same web app to add your skills on your website. 
-For demo vist: https://comfortchambeshi.witlevels.com/
+For demo vist: https://comfortbatcall.witlevels.com/
